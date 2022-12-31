@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador ONE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="encriptador">
+
+        <img id="logo" src="imagenes/logo.png" alt="">
+        
+        <div id="entrada">
+            <textarea id="txtentrada" placeholder="Ingrese el texto aqui"></textarea>            
+            <div id="alerta">
+                <img src="imagenes/alerta.png"><p>Solo letras minúsculas y sin acento</p>
+            </div>            
+            <div id="botones">
+                <button class="boton" id="botonencriptar">Encriptar</button>
+                <button class="boton" id="botondesencriptar">Desencriptar</button>
+            </div>            
+        </div>
+        
+        <div id="salida">
+            <textarea id="txtsalida" readonly></textarea>            
+            <div id="msgsalida">
+                <img src="imagenes/muñeco.png">
+                <h1>Ningún mensaje fue encontrado</h1>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>            
+            <button class="boton" id="botoncopiar">Copiar</button>
+        </div>
+
+    </div>
+</body>
+</html>
+
+<script>
+
+    //textareas
+    var textoEntrada = document.getElementById("txtentrada");
+    var textoSalida = document.getElementById("txtsalida");
+    //botones
+    var botonEncriptar = document.getElementById("botonencriptar");
+    var botonDesencriptar = document.getElementById("botondesencriptar");
+    var botonCopiar = document.getElementById("botoncopiar");
+
+    //mensaje de texto no encontrado
+    var msgsalida = document.getElementById("msgsalida");
+
+    botonCopiar.disabled = true;
+
+    function encriptar() {
+        textoSalida.innerHTML = (((((textoEntrada.value).replace(/\e/g,"enter")).replace(/\i/g,"imes")).replace(/\a/g,"ai")).replace(/\o/g,"ober")).replace(/\u/g,"ufat");
+             
+        botonCopiar.disabled = false;
+                
+        if(textoEntrada.value.trim() == ""){
+            msgsalida.style.display="";  
+        }
+        else{
+            msgsalida.style.display="none"; 
+        }       
+        
+        textoEntrada.value = "";
+        
+    }
+
+    function desencriptar() {
+        textoSalida.innerHTML = (((((textoEntrada.value).replace(/enter/g,"e")).replace(/imes/g,"i")).replace(/ai/g,"a")).replace(/ober/g,"o")).replace(/ufat/g,"u");
+
+        botonCopiar.disabled = false;
+
+        if(textoEntrada.value.trim() == ""){
+            msgsalida.style.display="";  
+        }
+        else{
+            msgsalida.style.display="none"; 
+        }   
+
+        textoEntrada.value = "";   
+    }
+
+    botonEncriptar.onclick = encriptar;
+
+    botonDesencriptar.onclick = desencriptar;
+
+    botonCopiar.addEventListener("click",function(){
+        textoSalida.focus();
+        document.execCommand("selectAll");
+        document.execCommand("copy");      
+    })
+
+    
+    
+
+</script>
