@@ -148,3 +148,18 @@ p{
     font-family: 'Inter';
     font-size: 12px;
 }
+
+footer{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Inter';
+    color: #0A3871;
+    transition: 500ms;
+
+}
+
+footer:hover{
+    font-size: 25px;
+}
