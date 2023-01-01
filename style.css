@@ -163,3 +163,43 @@ footer{
 footer:hover{
     font-size: 25px;
 }
+
+@media screen and (max-width:480px){
+    #salida{
+        top: 750px;
+        left: 15px;
+    }
+    
+    footer{
+        position: relative;
+        top: 700px;
+    }
+
+}
+
+@media screen and (max-width:850px){
+    #salida{
+        top: 750px;
+        left: auto;
+        right: auto;
+    }
+    
+    footer{
+        position: relative;
+        top: 750px;
+    }
+}
+
+
+@media screen and (max-width:1480px){
+    #salida{
+        top: 750px;
+        left: auto;
+        right: auto;
+    }
+    
+    footer{
+        position: relative;
+        top: 750px;
+    }
+}
