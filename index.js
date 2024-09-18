@@ -1,8 +1,11 @@
-const $textarea = document.querySelector(".form-textarea").value;
+const $textarea = document.querySelector(".form-textarea").textContent;
 
 const $button_encriptar = document.querySelector("button");
 
-console.log($textarea);
+$button_encriptar.addEventListener("click", () => {
+  console.log($textarea);
+});
+
 console.log($button_encriptar);
 
 function encriptador(e) {
@@ -42,8 +45,10 @@ function desencriptador(e) {
     let letra_i = letra_e.replaceAll("imes", "i");
     let letra_a = letra_i.replaceAll("ai", "a");
     let letra_o = letra_a.replaceAll("ober", "o");
-    let letra_u = letra_o.replaceAll("utaf", "u");
+    let letra_u = letra_o.replaceAll("ufat", "u");
     return letra_u;
+  } else {
+    return (e = e);
   }
 }
 const desencriptar = (text) => {
@@ -55,4 +60,8 @@ const desencriptar = (text) => {
   return texto_ultimo;
 };
 
-console.log(desencriptar("hoberlai cobermober enterstais"));
+console.log(
+  desencriptar(
+    "fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!"
+  )
+);
