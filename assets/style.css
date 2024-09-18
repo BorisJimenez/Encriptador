@@ -1,0 +1,276 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='360' height='3000' preserveAspectRatio='none' viewBox='0 0 360 3000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1188%26quot%3b)' fill='none'%3e%3crect width='360' height='3000' x='0' y='0' fill='rgba(35%2c 93%2c 129%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c802.852C148.983%2c794.227%2c275.773%2c705.055%2c399.311%2c621.339C520.13%2c539.465%2c640.855%2c452.931%2c707.771%2c323.228C776.498%2c190.015%2c792.147%2c37.39%2c777.547%2c-111.794C762.462%2c-265.935%2c734.567%2c-432.361%2c623.286%2c-540.08C514.272%2c-645.605%2c348.714%2c-659.024%2c197.649%2c-673.132C68.012%2c-685.239%2c-50.742%2c-624.222%2c-180.627%2c-615.158C-358.338%2c-602.757%2c-556.521%2c-709.817%2c-704.208%2c-610.2C-850.678%2c-511.403%2c-879.239%2c-304.867%2c-900.645%2c-129.493C-921.741%2c43.342%2c-913.012%2c226.575%2c-824.653%2c376.607C-739.838%2c520.621%2c-578.644%2c592.619%2c-430.172%2c669.361C-294.041%2c739.724%2c-152.984%2c811.709%2c0%2c802.852' fill='%2321587b'%3e%3c/path%3e%3cpath d='M360 4216.154C588.2719999999999 4181.756 649.525 3872.551 822.528 3719.707 960.11 3598.156 1156.165 3560.424 1267.467 3414.426 1395.591 3246.362 1516.633 3047.005 1495.681 2836.714 1474.54 2624.52 1323.3220000000001 2442.9809999999998 1157.342 2309.1 1006.181 2187.172 797.0930000000001 2198.0969999999998 616.235 2127.342 412.228 2047.531 242.411 1825.46 27.326999999999998 1867.021-186.235 1908.288-313.687 2135.398-416.74300000000005 2326.948-506.36400000000003 2493.5280000000002-469.69000000000005 2690.499-514.573 2874.255-565.987 3084.751-764.0070000000001 3276.968-699.296 3483.764-635.043 3689.098-378.68899999999996 3751.692-201.71699999999998 3874.049-17.661999999999978 4001.303 138.735 4249.496 360 4216.154' fill='%23256288'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1188'%3e%3crect width='360' height='3000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-size: cover;
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.header-title {
+  color: #fff;
+}
+
+.header-img {
+  width: 10%;
+  opacity: 50%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  width: 80%;
+  height: auto;
+}
+
+.form-textarea {
+  background-color: #fff2;
+  color: #fff;
+  height: 60vh;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.8rem #110d3a;
+}
+
+.form-textarea::placeholder {
+  color: #fff;
+}
+
+.form-message {
+  opacity: 50%;
+  margin-bottom: 1rem;
+}
+
+.form-message span {
+  font-size: 0.8rem;
+  color: #dfdfdf;
+}
+
+.form-message img {
+  width: 0.8rem;
+  background-color: #dfdfdf;
+  border-radius: 50%;
+}
+
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-buttons button:nth-child(1) {
+  margin-bottom: 1rem;
+}
+
+.form-buttons button {
+  background-color: #fff4;
+  width: 80%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.8rem #110d3a;
+  color: #fff;
+}
+
+.no-message {
+  background-color: #fff2;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  text-align: center;
+  color: #fff;
+  padding: 3rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.8rem #110d3a;
+  margin-bottom: 1rem;
+  display: none; /* No olvidar activar */
+}
+
+.no-message img {
+  display: none;
+}
+
+.no-message h2 {
+  margin-bottom: 1.5rem;
+}
+
+.with-message {
+  background-color: #fff2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.8rem #110d3a;
+  margin-bottom: 1rem;
+  padding-bottom: 1.2rem;
+  /* display: none; */ /* No olvidar activar */
+}
+
+.with-message input {
+  width: 100%;
+  height: 60vh;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  background-color: transparent;
+}
+
+.with-message button {
+  background-color: #fff4;
+  width: 80%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.8rem #110d3a;
+  color: #fff;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff2;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.footer-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #dfdfdf;
+}
+
+.footer-media-container {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-media-container img {
+  width: 1.5rem;
+}
+
+@media screen and (min-width: 760px) {
+  .header-title {
+    font-size: 4rem;
+  }
+
+  .form-textarea {
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  .form-buttons {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .form-buttons button {
+    width: 40%;
+  }
+
+  .form-buttons button:nth-child(1) {
+    margin-bottom: 0;
+  }
+
+  .with-message {
+    border-radius: 1rem;
+  }
+
+  .with-message input {
+    padding: 2rem;
+  }
+
+  .footer-media-container {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .header-img {
+    width: 3rem;
+    margin-right: 2rem;
+  }
+
+  .header-title {
+    font-size: 2rem;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .form {
+    width: 50vw;
+    margin: 0;
+  }
+
+  .no-message {
+    width: 40vw;
+    height: 73vh;
+    border-radius: 1rem;
+    align-content: space-around;
+  }
+
+  .no-message img {
+    display: inline-block;
+    width: 10rem;
+    margin-bottom: 5rem;
+  }
+
+  .with-message {
+    width: 40vw;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    height: 73vh;
+    justify-content: space-evenly;
+  }
+
+  .with-message button {
+    width: 55%;
+  }
+
+  .footer-media-container {
+    width: 20%;
+  }
+}
