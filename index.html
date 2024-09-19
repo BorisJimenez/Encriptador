@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador</title>
+    <link rel="icon" href="assets/images/eye-fill.svg" />
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
@@ -12,11 +13,9 @@
       <h1 class="header-title">Encriptador</h1>
     </header>
     <main>
-      <form class="form" action="">
+      <form class="form">
         <textarea
           class="form-textarea"
-          name=""
-          id=""
           placeholder="Ingrese el texto aqui"
         ></textarea>
         <article class="form-message">
@@ -24,8 +23,8 @@
           <span>Solo letras mayusculas y sin acentos</span>
         </article>
         <article class="form-buttons">
-          <button>Encriptar</button>
-          <button>Desencriptar</button>
+          <button id="encriptar">Encriptar</button>
+          <button id="desencriptar">Desencriptar</button>
         </article>
       </form>
       <section>
@@ -38,8 +37,8 @@
           <p>Ingresa el texto que desees encriptar o desencriptar.</p>
         </article>
         <article class="with-message">
-          <input type="text" readonly />
-          <button>Copiar</button>
+          <textarea class="texto-desencriptado" readonly> </textarea>
+          <button id="copiar">Copiar</button>
         </article>
       </section>
     </main>

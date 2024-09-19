@@ -97,12 +97,15 @@ body {
   font-size: 1rem;
   box-shadow: 0.1rem 0.1rem 0.8rem #110d3a;
   color: #fff;
+  cursor: pointer;
 }
 
 .no-message {
   background-color: #fff2;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -112,7 +115,7 @@ body {
   border-radius: 0.5rem;
   box-shadow: 0.1rem 0.1rem 0.8rem #110d3a;
   margin-bottom: 1rem;
-  display: none; /* No olvidar activar */
+  /* No olvidar activar */
 }
 
 .no-message img {
@@ -128,22 +131,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
   border-radius: 0.5rem;
   box-shadow: 0.1rem 0.1rem 0.8rem #110d3a;
-  margin-bottom: 1rem;
   padding-bottom: 1.2rem;
-  /* display: none; */ /* No olvidar activar */
+  display: none;
+  /* No olvidar activar */
 }
 
-.with-message input {
+.with-message textarea {
   width: 100%;
   height: 60vh;
-  padding: 1rem;
+  padding: 1.5rem;
   margin-bottom: 1rem;
   border: none;
+  color: #fff;
   background-color: transparent;
 }
 
@@ -156,6 +161,9 @@ body {
   font-size: 1rem;
   box-shadow: 0.1rem 0.1rem 0.8rem #110d3a;
   color: #fff;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .footer {

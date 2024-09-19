@@ -1,12 +1,45 @@
-const $textarea = document.querySelector(".form-textarea").textContent;
+const $textarea = document.querySelector(".form-textarea");
 
-const $button_encriptar = document.querySelector("button");
+const $button_encriptar = document.getElementById("encriptar");
 
-$button_encriptar.addEventListener("click", () => {
-  console.log($textarea);
+const $button_desencriptar = document.getElementById("desencriptar");
+
+const $texto_desencriptado = document.querySelector(".texto-desencriptado");
+
+const $button_copiar = document.getElementById("copiar");
+
+const $card_whit_message = document.querySelector(".with-message");
+
+const $card_no_message = document.querySelector(".no-message");
+
+$button_encriptar.addEventListener("click", (event) => {
+  event.preventDefault();
+  let base = $textarea.value;
+  let texto = base.toLowerCase().trim();
+  let texto_separado = texto.split("");
+  let texto_nuevo = texto_separado.map(encriptador);
+  let texto_ultimo = texto_nuevo.join("");
+  $card_no_message.style.display = "none";
+  $card_whit_message.style.display = "flex";
+  $texto_desencriptado.value = texto_ultimo;
 });
 
-console.log($button_encriptar);
+$button_desencriptar.addEventListener("click", (event) => {
+  event.preventDefault();
+  let base = $textarea.value;
+  let texto = base.toLowerCase().trim();
+  let texto_modificado = texto.split(" ");
+  let texto_nuevo = texto_modificado.map(desencriptador);
+  let texto_ultimo = texto_nuevo.join(" ");
+  $card_no_message.style.display = "none";
+  $card_whit_message.style.display = "flex";
+  $texto_desencriptado.value = texto_ultimo;
+});
+
+$button_copiar.addEventListener("click", (e) => {
+  e = $texto_desencriptado.value;
+  $textarea.value = e;
+});
 
 function encriptador(e) {
   if (e === "e") {
@@ -23,15 +56,6 @@ function encriptador(e) {
     return (e = e);
   }
 }
-const encriptar = (text) => {
-  let texto = text.toLowerCase().trim();
-  let texto_separado = texto.split("");
-  let texto_nuevo = texto_separado.map(encriptador);
-  let texto_ultimo = texto_nuevo.join("");
-  return texto_ultimo;
-};
-
-console.log(encriptar("hola como esTas "));
 
 function desencriptador(e) {
   if (
@@ -51,17 +75,3 @@ function desencriptador(e) {
     return (e = e);
   }
 }
-const desencriptar = (text) => {
-  let texto = text.toLowerCase().trim();
-  let texto_modificado = texto.split(" ");
-  let texto_nuevo = texto_modificado.map(desencriptador);
-  let texto_ultimo = texto_nuevo.join(" ");
-
-  return texto_ultimo;
-};
-
-console.log(
-  desencriptar(
-    "fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!"
-  )
-);
